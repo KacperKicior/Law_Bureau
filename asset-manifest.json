@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Law_Bureau/static/css/main.448d5b25.css",
-    "main.js": "/Law_Bureau/static/js/main.e263e073.js",
+    "main.css": "/Law_Bureau/static/css/main.08a441bb.css",
+    "main.js": "/Law_Bureau/static/js/main.92a72ee9.js",
     "static/js/453.0c3448f9.chunk.js": "/Law_Bureau/static/js/453.0c3448f9.chunk.js",
     "static/media/Law_Street_Dark.png": "/Law_Bureau/static/media/Law_Street_Dark.a0f1e34301f5ef89b29e.png",
     "static/media/Law_Street_Bright.PNG": "/Law_Bureau/static/media/Law_Street_Bright.1dc4eeeb7037a020db29.PNG",
     "static/media/default_avatar_dark.png": "/Law_Bureau/static/media/default_avatar_dark.ac542805c96d98480bea.png",
     "static/media/default_avatar_light.webp": "/Law_Bureau/static/media/default_avatar_light.5cdf677d6e13f4255b6d.webp",
     "index.html": "/Law_Bureau/index.html",
-    "main.448d5b25.css.map": "/Law_Bureau/static/css/main.448d5b25.css.map",
-    "main.e263e073.js.map": "/Law_Bureau/static/js/main.e263e073.js.map",
+    "main.08a441bb.css.map": "/Law_Bureau/static/css/main.08a441bb.css.map",
+    "main.92a72ee9.js.map": "/Law_Bureau/static/js/main.92a72ee9.js.map",
     "453.0c3448f9.chunk.js.map": "/Law_Bureau/static/js/453.0c3448f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.448d5b25.css",
-    "static/js/main.e263e073.js"
+    "static/css/main.08a441bb.css",
+    "static/js/main.92a72ee9.js"
   ]
 }
