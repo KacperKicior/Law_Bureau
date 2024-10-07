@@ -14,3 +14,20 @@ div.fp-watermark {
   display: none;
 }
 
+#title-card-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.8s ease, top 0.8s ease, left 0.8s ease;
+  transform-origin: top left;
+}
+
+#title-card-div.div-animate {
+  top: 20px;
+  left: 20px;
+  transform: scale(0.4);
+}
+
+
+
