@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+  .text-outline-zinc{
+    text-shadow:
+            4px 4px 0 rgb(9 9 11),
+            -4px 4px 0 rgb(9 9 11),
+            4px -4px 0 rgb(9 9 11),
+            -4px -4px 0 rgb(9 9 11);
+  }
+}
+
+@layer utilities{
+  .text-outline-slate{
+    text-shadow:
+            4px 4px 0 rgb(241 245 249),
+            -4px 4px 0 rgb(241 245 249),
+            4px -4px 0 rgb(241 245 249),
+            -4px -4px 0 rgb(241 245 249);
+  }
+}
+
 footer.footer.bg-base-200.text-base-content.p-10{
   padding: 40px;
 }
