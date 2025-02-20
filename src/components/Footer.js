@@ -1,4 +1,26 @@
-function Footer(){
+import React from 'react';
+const translations = {
+    EN: {
+        Providing:"Providing reliable law attorney since 1992",
+        Socials:"Socials",
+        Legal:"Legal",
+        ToU:"Terms of use",
+        PrivacyPolicy:"Privacy policy",
+        CookiePolicy:"Cookie policy"
+
+    },
+    PL: {
+        Providing: "Zapewniamy rzetelną pomoc prawną od 1992 roku",
+        Socials: "Media społecznościowe",
+        Legal: "Polityki Prawne",
+        ToU: "Warunki korzystania",
+        PrivacyPolicy: "Polityka prywatności",
+        CookiePolicy: "Polityka plików cookie"
+    }
+};
+
+function Footer({language}){
+    const footer = translations[language];
     return (
         <footer className="footer bg-base-200 text-base-content p-10 dark:bg-zinc-900 dark:text-slate-100">
             <aside>
@@ -16,28 +38,20 @@ function Footer(){
                 <p>
                     Law Bureau
                     <br/>
-                    Providing reliable law attorney since 1992
+                    {footer.Providing}
                 </p>
             </aside>
             <nav>
-                <h6 className="footer-title">Services</h6>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <h6 className="footer-title">{footer.Socials}</h6>
+                <a href="/#" className="link link-hover">LinkedIn</a>
+                <a href="/#" className="link link-hover">Facebook</a>
+                <a href="/#" className="link link-hover">Instagram</a>
             </nav>
             <nav>
-                <h6 className="footer-title">Company</h6>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Jobs</a>
-                <a className="link link-hover">Press kit</a>
-            </nav>
-            <nav>
-                <h6 className="footer-title">Legal</h6>
-                <a className="link link-hover">Terms of use</a>
-                <a className="link link-hover">Privacy policy</a>
-                <a className="link link-hover">Cookie policy</a>
+                <h6 className="footer-title">{footer.Legal}</h6>
+                <a href="/#" className="link link-hover">{footer.ToU}</a>
+                <a href="/#" className="link link-hover">{footer.PrivacyPolicy}</a>
+                <a href="/#" className="link link-hover">{footer.CookiePolicy}</a>
             </nav>
         </footer>
     );
