@@ -1,6 +1,6 @@
 import default_avatar_light from '../imgs/default_avatar_light.webp'
 import default_avatar_dark from '../imgs/default_avatar_dark.png'
-import React, { useContext } from 'react';
+import React from 'react';
 
 const translations = {
     EN: {
