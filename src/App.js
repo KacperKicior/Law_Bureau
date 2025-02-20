@@ -13,7 +13,7 @@ function App() {
     const [dark, setDark] = React.useState(false);
     const [language, setLanguage] = React.useState('EN');
     const [animateTitle, setAnimateTitle] = React.useState(false);
-    const [fullpageApi, setFullpageApi] = React.useState(null);  // Store fullpageApi here
+    const [fullpageApi, setFullpageApi] = React.useState(null);
 
     React.useEffect(() => {
         const savedLanguage = localStorage.getItem('language');
@@ -50,24 +50,38 @@ function App() {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 w-full h-screen z-50">
-                <div id="title-card-div" className={` ${animateTitle ? 'div-animate' : ''}`}>
-                    <h1 id="title-card-h1" className="max-[600px]:text-6xl font-extrabold text-8xl dark:text-slate-100 cursor-pointer"
-                        onClick={() => fullpageApi && fullpageApi.moveTo(1)}> {/* Ensure fullpageApi is defined */}
+            <nav
+                className="fixed top-0 left-0 w-full z-50 h-screen pointer-events-none md:pointer-events-none transition-all duration-700"
+            >
+                <div
+                    id="title-card-div"
+                    className={`pointer-events-auto ${animateTitle ? 'div-animate' : ''}`}
+                >
+                    <h1
+                        id="title-card-h1"
+                        className="max-[600px]:text-6xl font-extrabold text-8xl dark:text-slate-100 text-outline-slate dark:text-outline-zinc cursor-pointer pointer-events-auto"
+                        onClick={() => fullpageApi && fullpageApi.moveTo(1)}
+                    >
                         LawBureau
                     </h1>
                 </div>
 
-                <div className={"absolute top-0 right-0 flex gap-4 px-6 py-4"}>
-                    <button className={"btn btn-sm dark:bg-zinc-800 dark:text-slate-100"} onClick={languageToggleHandler}>
+                <div className="absolute top-0 right-0 flex gap-4 px-6 py-4 pointer-events-auto">
+                    <button
+                        className="btn btn-sm dark:bg-zinc-800 dark:text-slate-100"
+                        onClick={languageToggleHandler}
+                    >
                         {language}
                     </button>
-                    <button className={"btn btn-sm dark:bg-zinc-800 dark:text-slate-100"} onClick={() => darkModeHandler()}>
-                        {dark && <IoSunny />} {!dark && <IoMoon />}
+                    <button
+                        className="btn btn-sm dark:bg-zinc-800 dark:text-slate-100"
+                        onClick={darkModeHandler}
+                    >
+                        {dark ? <IoSunny /> : <IoMoon />}
                     </button>
                 </div>
-
             </nav>
+
             <ReactFullpage
                 scrollingSpeed={700}
                 onLeave={(origin, destination, direction) => {
@@ -79,7 +93,7 @@ function App() {
                     }
                 }}
                 render={({ state, fullpageApi }) => {
-                    setFullpageApi(fullpageApi);  // Save fullpageApi for use in the onClick handler
+                    setFullpageApi(fullpageApi);
                     return (
                         <div>
                             <div className="section h-screen">
@@ -95,7 +109,7 @@ function App() {
                                 <Contact language={language} />
                             </div>
                             <div className="section">
-                                <Footer />
+                                <Footer language={language} />
                             </div>
                         </div>
                     );
