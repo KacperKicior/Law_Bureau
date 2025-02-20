@@ -1,15 +1,15 @@
 import law_street_bright from '../imgs/Law_Street_Bright.PNG';
 import law_street_dark from '../imgs/Law_Street_Dark.png';
-import React, { useContext } from 'react';
+import React from 'react';
 
 const translations = {
     EN: {
         Contact:"Contact",
         Ifyoufeel:"If you feel we might be able to help you and you want to get us on your side, please contact us at ",
-        andWeWill:"and we will get back as soon as possible.",
-        Ifyouwould:"If you would like to join our team, please visit our",
+        andWeWill:" and we will get back as soon as possible.",
+        Ifyouwould:"If you would like to join our team, please visit our ",
         Carrers:"Carrers",
-        page:"page.",
+        page:" page.",
         Ifyouwant:"If you want to keep in touch and see what our team is up to, please follow us on ",
         Ifyouhave:"If you have any other questions, please contact us at ",
         Orcall:" or call ",
